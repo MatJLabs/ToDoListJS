@@ -1,6 +1,6 @@
 document.getElementById("addTaskButton").addEventListener("click", function(){
     const taskInput = document.getElementById("taskInput");
-    const taskValue = taskInput.ariaValueMax.trim();
+    const taskValue = taskInput.value.trim();
 
     if (taskValue !== ""){
         const taskList = document.getElementById("taskList");
@@ -13,7 +13,7 @@ document.getElementById("addTaskButton").addEventListener("click", function(){
             taskList.removeChild(li);
         });
 
-        taskList.appendChild(deleteButton);
+        li.appendChild(deleteButton);
         taskList.appendChild(li);
         taskInput.value = "";
     }
